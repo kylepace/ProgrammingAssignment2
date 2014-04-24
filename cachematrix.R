@@ -2,6 +2,11 @@
 
 ## Takes a square matrix and outputs list with dims set,get setinverse and getinverse, providing
 ## access to the underlying datatype.
+## Return Functions ->
+## set -> assigns matrix
+## get -> returns raw matrix values
+## setinverse -> assigns matrix inverse
+## getinverse -> returns matrix inverse values
 
 makeCacheMatrix <- function(x = matrix()) {
 	i <- NULL
@@ -17,6 +22,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Takes a cacheable matrix (see above) and stores inverse to avoid future computation
+## Will print message if using cache
 
 cacheSolve <- function(x, ...) {
 	m <- x$getinverse()
